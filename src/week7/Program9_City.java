@@ -1,22 +1,23 @@
 package week7;
+//Input any alphabet from “A" to “F” and print their city name accordingly (use if else) if any other alphabet should be invalid entry
 
 import java.util.Scanner;
 
-//Input any alphabet from “A" to “F” and print their city name accordingly (use if else) if any other alphabet should be invalid entry
 public class Program9_City {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  // main method
         char letter = 0;
-        city(letter);
-
+        city(letter); //call other method
     }
 
-    public static char city(char letter) {
-        Scanner scn = new Scanner(System.in);
+    public static char city(char letter) { //other method parameter letter
+        Scanner scn = new Scanner(System.in);  //start scanner
         System.out.println("Enter Alphabet Letter (between A and F)");
         letter = scn.next().charAt(0);
         char letters;
+        scn.close(); //close scanner
 
+        //start switch operation
         switch (letter) {
             case 'a':
                 System.out.println("Amsterdam");
@@ -37,16 +38,9 @@ public class Program9_City {
                 System.out.println("Frankfurt");
             default:
                 System.out.println("Entered Letter is Invalid");
-
-
-
-
         }
-
-        return letter;
+        return letter;  //return letter to method
     }
-
-
 }
 
 
